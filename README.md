@@ -69,17 +69,17 @@ You bring the n8n instance and an LLM API key (OpenAI, Anthropic, Azure OpenAI, 
 ```mermaid
 graph TD
   A[Analyst/Operator] -->|Manual/Cron/Webhook| B[n8n Workflow]
-  B --> C[HTTP Request<br/>Website Scraper]
+  B --> C["HTTP Request<br/>Website Scraper"]
   B --> D[GitHub API]
-  B --> E[hunter.io / Other Email Pattern APIs]
-  B --> F[Optional: Nmap Runner<br/>(Execute Command)]
+  B --> E["hunter.io / Other Email Pattern APIs"]
+  B --> F["Optional: Nmap Runner<br/>Execute Command"]
   C --> G[LLM API]
   D --> G
   E --> G
   F --> G
-  G --> H[(Storage: DB/Files/S3)]
-  G --> I[Report Builder<br/>(Markdown/HTML)]
-  I --> J[[Slack / Email / Docs]]
+  G --> H[("Storage: DB/Files/S3")]
+  G --> I["Report Builder<br/>Markdown/HTML"]
+  I --> J[["Slack / Email / Docs"]]
 ```
 
 **Images:**
